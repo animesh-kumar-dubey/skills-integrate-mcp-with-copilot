@@ -16,12 +16,56 @@ body {
 }
 
 header {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
   padding: 20px 0;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+}
+
+#auth-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#teacher-status {
+  font-size: 14px;
+}
+
+dialog {
+  border: none;
+  border-radius: 5px;
+  padding: 25px;
+  margin: auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+dialog h3 {
+  margin-bottom: 20px;
+  color: #1a237e;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+#login-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 header h1 {
@@ -116,7 +160,7 @@ section h3 {
   color: #c62828;
   cursor: pointer;
   font-size: 14px;
-  padding: 2px 5px;
+  padding: 5px 8px;
   transition: all 0.2s;
   border-radius: 3px;
 }
@@ -197,4 +241,10 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
 }
